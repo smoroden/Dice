@@ -13,16 +13,18 @@
 @interface GameController : NSObject
 
 
-@property (nonatomic) NSMutableSet *heldDice;
-@property (nonatomic) NSMutableArray *dice;
+
+@property (nonatomic) NSInteger topScore;
 
 
 -(instancetype)init;
 
--(void)holdDie:(int)dieNumber;
+-(BOOL)holdDie:(NSInteger)dieNumber;
 -(void)listDice;
 -(void)resetDice;
 -(void)rollDice;
 -(BOOL)allDiceHeld;
--(int)calculateScore;
+-(NSInteger)calculateScore;
+-(void)endGame;
+-(void)newGame;
 @end
