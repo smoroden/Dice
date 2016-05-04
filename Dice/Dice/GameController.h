@@ -19,4 +19,9 @@
 
 -(instancetype)init;
 
+-(void)holdDie:(int)dieNumber;
+-(void)listDice;
+-(void)resetDice;
+-(void)rollDice;
+
 @end

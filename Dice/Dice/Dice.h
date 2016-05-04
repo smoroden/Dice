@@ -14,4 +14,6 @@
 
 -(instancetype)init;
 
+-(void)roll;
+
 @end
