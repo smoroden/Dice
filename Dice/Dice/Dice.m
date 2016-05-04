@@ -13,14 +13,14 @@
 -(instancetype)init {
     self = [super init];
     if (self) {
-        self.currentValue = [NSNumber numberWithUnsignedInteger:arc4random_uniform(6) + 1];
+        self.currentValue = arc4random_uniform(6) + 1;
     }
     
     return self;
 }
 
 -(void)roll {
-    self.currentValue = [NSNumber numberWithUnsignedInteger:arc4random_uniform(6) + 1];
+    self.currentValue = arc4random_uniform(6) + 1;
 }
 
 @end

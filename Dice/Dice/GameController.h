@@ -23,5 +23,6 @@
 -(void)listDice;
 -(void)resetDice;
 -(void)rollDice;
-
+-(BOOL)allDiceHeld;
+-(int)calculateScore;
 @end

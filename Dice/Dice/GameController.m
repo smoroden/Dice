@@ -32,10 +32,12 @@
     for (int i = 0; i < self.dice.count; i ++) {
         NSString *output;
         Dice *die = self.dice[i];
-        output = [self.heldDice containsObject:self.dice[i]] ? output = [NSString stringWithFormat:@"Die %d: [%@]", i, die.currentValue] : [NSString stringWithFormat:@"Die %d: %@", i, die.currentValue];
+        output = [self.heldDice containsObject:self.dice[i]] ? output = [NSString stringWithFormat:@"Die %d: [%ld]", i, (long)die.currentValue] : [NSString stringWithFormat:@"Die %d: %ld", i, (long)die.currentValue];
         
         NSLog(@"%@", output);
     }
+    
+    NSLog(@"Your current score is: %d", [self calculateScore]);
     
 }
 -(void)rollDice {
@@ -52,6 +54,15 @@
 
 -(BOOL)allDiceHeld {
     return self.heldDice.count == 5 ? YES : NO;
+}
+
+-(int)calculateScore {
+    int score = 0;
+    for (Dice * die in self.dice) {
+        score += die.currentValue;
+    }
+    
+    return score;
 }
 
 

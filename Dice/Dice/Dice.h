@@ -10,7 +10,7 @@
 
 @interface Dice : NSObject
 
-@property (nonatomic) NSNumber *currentValue;
+@property (nonatomic) NSInteger currentValue;
 
 -(instancetype)init;
 

@@ -66,9 +66,9 @@
 		585A26631CDA6367002945C5 /* Dice */ = {
 			isa = PBXGroup;
 			children = (
+				585A26641CDA6367002945C5 /* main.m */,
 				585A26711CDA6DEB002945C5 /* InputCollector.h */,
 				585A26721CDA6DEB002945C5 /* InputCollector.m */,
-				585A26641CDA6367002945C5 /* main.m */,
 				585A266B1CDA6391002945C5 /* Dice.h */,
 				585A266C1CDA6391002945C5 /* Dice.m */,
 				585A266E1CDA643F002945C5 /* GameController.h */,
