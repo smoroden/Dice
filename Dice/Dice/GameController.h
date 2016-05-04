@@ -27,4 +27,6 @@
 -(NSInteger)calculateScore;
 -(void)endGame;
 -(void)newGame;
+
+-(void)cheat;
 @end

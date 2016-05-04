@@ -88,6 +88,8 @@
     } else {
         NSLog(@"Round finished. Your score was: %ld. The top score is %ld. Better luck next time.", (long)[self calculateScore], (long)self.topScore);
     }
+    NSLog(@"-----------------------------------");
+    NSLog(@"Starting a new game");
     [self resetDice];
     [self rollDice];
 }
@@ -98,5 +100,10 @@
     self.topScore = 30;
 }
 
+-(void)cheat{
+    for (Dice *die in self.dice) {
+        die.currentValue = 1;
+    }
+}
 
 @end

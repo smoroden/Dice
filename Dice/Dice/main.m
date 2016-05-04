@@ -48,6 +48,7 @@ int main(int argc, const char * argv[]) {
             }
             
             input = [ic inputForPrompt:@"Availible commands:\n hold [die number] - holds the die at the current value or releases a currently held die\n roll - rolls all of the un-held dice\n reset - clears all held dice\n new-game - resets the top score\n quit - quits the game"];
+            NSLog(@"Number of rolls: %ld", numRolls);
             
             // We only ever care about the first and second words. This splits them up.
             NSArray *components = [input componentsSeparatedByString:@" "];
@@ -80,6 +81,9 @@ int main(int argc, const char * argv[]) {
             } else if ([command isEqualToString:@"new-game"]) {
                 [gc newGame];
                 numRolls = 0;
+            } else if ([command isEqualToString:@"rollll"]) {
+                [gc cheat];
+                [gc endGame];
             } else {
                 NSLog(@"Invalid command.");
             }
