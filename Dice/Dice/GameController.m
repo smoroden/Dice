@@ -75,7 +75,7 @@
 -(NSInteger)calculateScore {
     NSInteger score = 0;
     for (Dice * die in self.dice) {
-        score += die.currentValue;
+        score += die.currentValue == 3 ? 0 : die.currentValue;
     }
     
     return score;
